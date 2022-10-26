@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视频弹幕(带有时间轴的弹幕)</title>
+  <link rel="stylesheet" href="./style/danmaku-wall.css">
+</head>
+
+<body>
+  <div class="danmaku-wall">
+    <div class="screen">
+      <!-- 弹幕 -->
+    </div>
+    <div class="timer-shaft"><div class="timer-shaft-tick"></div></div>
+    <div class="text-center control-panel">
+      <input type="text" placeholder="请输入弹幕内容" maxlength="50">
+      <div>
+        <button class="primary" type="button">发射</button>
+        <button class="clean" type="button">清屏</button>
+        <button class="primary" type="button">重新播放</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./scripts/danmaku-wall.js"></script>
+</body>
+
+</html>
