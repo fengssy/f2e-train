@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.app .w-content {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background: #fff;
+  font: 12px/18px Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-shadow: 0 1px 0 #222;
+}
+
+.app .header {
+  /*background: url(../public/static/images/banner.jpg) no-repeat right;*/
+  background: url(https://demosc.chinaz.net/Files/DownLoad/moban/202006/moban4673/assets/images/1.jpg) no-repeat right;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+  display: grid;
+  grid-template-rows: 120px 1fr;
+}
+
+.app .header:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.57);
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.app .header .nav-left a.navbar-brand {
+  font-weight: bold;
+  font-size: 36px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.app .header .nav-right a.navlink {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+
+.app .banner .banner-info .banner-text {
+  font-weight: 400;
+  font-size: 56px !important;
+  line-height: 65px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.app .banner .banner-tag {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.app .banner .banner-avator {
+  width: 128px;
+  height: 128px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+}
+
+
+
+
+.app main section {
+  margin-top: 30px;
+}
+
+.app main {
+  background: #fff;
+}
+
+.app main .section-title {
+  position: relative;
+  padding: 12px 0 16px;
+  margin-bottom: 10px;
+}
+
+.app main .section-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.app main .section-item {
+  width: 23%;
+  height: 200px;
+  transition: 0.3s ease-out;
+  border-radius: 4px;
+  background: rgba(207, 207, 207, 0.8);
+  position: relative;
+  color:#777;
+  text-align: center;
+}
+
+.app main .section-item:hover {
+  background: #555;
+  color:#fff;
+  transition: 0.3s ease-out;
+  opacity: 0.8;
+}
+
+.app main .section-item > span {
+  font-weight: 400;
+  font-size: 60px;
+  position:absolute;
+  bottom:5px;
+  right:0;
+  line-height: 60px;
+  margin-right:5px;
+}
+.app main .section-item > img {
+  object-fit: cover;
+  max-width: 40%;
+  max-height: 40%;
+  margin-top:30px;
+}
+
+.app main .section-item .section-item-info {
+  display: none;
+  color:#fff;
+  transition: 0.3s ease-out;
+  padding:5px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.app main .section-item:hover .section-item-info {
+  display: block;
+  transition: 0.3s ease-out;
+}
+
+
+.app footer {
+  margin-top:120px;
+  background: #222 url(https://demosc.chinaz.net/Files/DownLoad/moban/201308/chahua3002/style/images/texture.png) repeat;
+}
+
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  min-height:60px;
+  padding-top:30px;
+}
+.footer-links > a{
+  margin-left:50px;
+}
+.footer-links > a > img{
+  height:30px;
+}
+
+.footer-copyright{
+  margin-top:30px;
+  padding-top:30px;
+  border-top: 1px solid #454545;
+}
+.footer-copyright-text{
+  color:#aaa;
+  font-size:20px;
+  line-height: 23px;
+  padding-bottom: 20px;
+  text-align: center;
+}
