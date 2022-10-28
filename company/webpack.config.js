@@ -25,7 +25,6 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 1,
-                            //url:false,
                         }
                     },
                     {
@@ -35,16 +34,23 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [{
-                    loader:'file-loader',
-                    options:{
-                        name:'images/[name].[ext]',
-                        esModule:false
-                    }
-                }],
-                //webpack5时,file-loader有点冲突,需要修改成这个类型,才可以按预期的解析
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]',
+                            esModule: false,
+                        }
+                    },
+                ],
+                //webpack5时,有点冲突,需要修改成这个类型,才可以按预期的解析
                 type: 'javascript/auto'
-            }
+            },
+            {
+                test: /.\html$/,
+                //处理html中的img图片
+                loader: 'html-loader',
+            },
         ]
     },
     plugins: [

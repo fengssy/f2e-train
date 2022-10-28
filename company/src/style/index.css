@@ -1,0 +1,139 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+    .nav-mb {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        /**/
+    }
+
+    .nav-mb .links {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        width: 64.58vw;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #252429;
+    }
+
+    .nav-mb .nav-bg-mask {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.3;
+    }
+
+    .nav-mb a.link {
+        height: 31.25vw;/*15rem 240px*/
+        line-height: 31.25vw;
+        width: 50.52vw;/*388px*/
+        margin-left: 7.03vw;/*54px*/
+        font-size: 4.16vw;
+        color: #FFFFFF;
+        border-bottom: 0.52vw solid #333333;
+    }
+
+    .nav-pc {
+        display: block;
+        margin-top: 2.25rem;
+        position: relative;
+        width: auto;
+        height: auto;
+        left: auto;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+
+    nav.nav-pc .links {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-color:transparent;
+    }
+
+    nav.nav-pc a.link {
+        color: #fff;
+        font-weight: 400;
+        font-size: 0.875rem;
+        height: auto;
+        width: auto;
+        line-height: 1.25rem;
+        margin-left: 0;
+        margin-right: 6rem;
+        text-decoration: inherit;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+        border-bottom: 0;
+    }
+
+    .nav-pc a.link:hover {
+        transform: scale(1.1);
+    }
+    .nav-pc a.link.current:after {
+        content: '';
+        width: 90%;
+        border-bottom: 2px solid #FF350D;
+        display: block;
+        margin: auto;
+        height: 8px;
+    }
+}
+
+* {
+    font-family: 'Microsoft YaHei UI';
+}
+
+.logo {
+    background: url(./images/logo.png)  no-repeat;
+    background-size: cover;
+}
+
+.menu {
+    background: url(./images/menu.png) no-repeat;
+    background-size: cover;
+}
+
+.close {
+    background: url(./images/close.png) no-repeat;
+    background-size: cover;
+}
+
+.annulusloading-svg{
+    width:2.082vw;
+    height:2.082vw;
+}
+.annulusloading-svg.current{
+    width:3.123vw;
+    height:3.123vw;
+}
+.annulusloading-svg-bg{
+    opacity: 0.5;
+    stroke:#B1B1B180;
+    stroke-width:10;
+}
+.annulusloading-svg-ring{
+    stroke:#FFF;
+    stroke-dasharray: 253px, 253px;
+    stroke-dashoffset: 253px;
+    transition: stroke-dashoffset 0.6s ease 0s, stroke 0.6s ease 0s;
+    transform: rotateZ(90deg);
+    transform-origin: 50% 50%;
+    stroke-width:10;
+    stroke-linecap:round;
+    opacity: 1;
+}
+.annulusloading-svg.current .annulusloading-svg-ring{
+    /*stroke-dashoffset: 0px;*/
+}
